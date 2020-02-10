@@ -91,14 +91,14 @@ document.body.appendChild(main);
     });
     
 // Step 6
-    // Create new div
+    // Find fifth div
     let fiveDiv = document.querySelector('#fiveDiv');
     // fiveDiv.className = 'row border my-2 p-2 border-dark rounded justify-content-center shadow';
     main.appendChild(fiveDiv);
     // // Create button
     let fiveBtn = document.createElement('button');
     fiveBtn.className = 'col-12 my-2 btn btn-primary';
-    fiveBtn.textContent = 'Add Friends';
+    fiveBtn.textContent = 'Meet My Friends';
     fiveDiv.prepend(fiveBtn);
     // // Create ul
     // let fiveUl = document.createElement('ul');
@@ -150,5 +150,10 @@ document.body.appendChild(main);
             }
         }
         fiveBtn.setAttribute('disabled', true);
+        let link = document.createElement('a');
+        link.textContent = 'Read more about my friends';
+        link.setAttribute('href', 'https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki'); 
+        link.setAttribute('target', '_blank');
+        fiveDiv.appendChild(link);
     })
     
