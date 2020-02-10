@@ -50,4 +50,13 @@ document.body.appendChild(main);
     })
 
 // Step 4
-    
+    // Create new div
+    let threeDiv = document.createElement('div');
+    threeDiv.className = 'row border my-2 p-2 border-dark rounded';
+    threeDiv.style = 'height: 200px'
+    main.appendChild(threeDiv);
+    // Create p element
+    let divPone = document.createElement('p');
+    divPone.textContent = 'Click me to see the rainbow!' 
+    threeDiv.appendChild(divPone);
+    // Event Listener for 
