@@ -1,12 +1,27 @@
+// Created divs
 let main = document.createElement('div');
+let btnDiv = document.createElement('div');
+let firstDiv = document.createElement('div');
+let twoDiv = document.createElement('div');
+let threeDiv = document.createElement('div');
+let fourDiv = document.createElement('div');
+let fiveDiv = document.querySelector('#fiveDiv');
+// Created elements
+let btn = document.createElement('button');
+let inputBtn = document.createElement('button');
+let textArea = document.createElement('textarea');
+let divPone = document.createElement('p');
+let fourBtn = document.createElement('button');
+let name = document.createElement('span');
+let fiveBtn = document.createElement('button');
+let link = document.createElement('a');
+
 main.className = 'container';
 document.body.appendChild(main);
 
 // Step 1
-    let btnDiv = document.createElement('div');
     btnDiv.className = 'row mt-4 justify-content-center'
     main.appendChild(btnDiv);
-    let btn = document.createElement('button');
     btn.textContent = 'Welcome';
     btn.className = 'btn btn-primary';
     btnDiv.appendChild(btn);
@@ -18,16 +33,13 @@ document.body.appendChild(main);
 // Step 2
 
     // Div for button and text area
-    let firstDiv = document.createElement('div');
     firstDiv.className = 'input-group my-3 shadow';
     main.appendChild(firstDiv);
     // Button
-    let inputBtn = document.createElement('button');
     inputBtn.className = 'btn btn-primary mr-2';
     inputBtn.textContent = 'Submit';
     firstDiv.appendChild(inputBtn);
     // Text Area
-    let textArea = document.createElement('textarea');
     textArea.className = 'form-control';
     firstDiv.appendChild(textArea);
     // Event Listener for clicks on button to display text in textbox
@@ -36,8 +48,7 @@ document.body.appendChild(main);
     })
 
 // Step 3
-    // Create new div
-    let twoDiv = document.createElement('div');
+    // Second div
     twoDiv.className = 'row border border-dark rounded shadow';
     twoDiv.style = 'height: 200px'
     main.appendChild(twoDiv);
@@ -50,12 +61,10 @@ document.body.appendChild(main);
     })
 
 // Step 4
-    // Create new div
-    let threeDiv = document.createElement('div');
+    // Third div
     threeDiv.className = 'row border my-2 p-2 border-dark rounded shadow';
     main.appendChild(threeDiv);
-    // Create p element
-    let divPone = document.createElement('p');
+    // p element
     divPone.style.fontSize = '1.5rem';
     divPone.textContent = 'Click me to see the rainbow!' 
     threeDiv.appendChild(divPone);
@@ -71,18 +80,16 @@ document.body.appendChild(main);
     }
 
 // Step 5
-    // Create new div
-    let fourDiv = document.createElement('div');
+    // Fourth div
     fourDiv.className = 'row row-cols-1 border my-2 p-2 border-dark rounded justify-content-center shadow';
     main.appendChild(fourDiv);
-    // Create button
-    let fourBtn = document.createElement('button');
+    // button
     fourBtn.className = 'col-12 btn btn-primary';
     fourBtn.textContent = 'My Name';
     fourDiv.appendChild(fourBtn);
     // Event listener for click to button, adds span with 'Ben'
     fourBtn.addEventListener('click', function(){
-        let name = document.createElement('span');
+        
         name.className = 'col';
         name.style.fontSize = '1.5rem';
         name.textContent = 'Ben';
@@ -91,12 +98,8 @@ document.body.appendChild(main);
     });
     
 // Step 6
-    // Find fifth div
-    let fiveDiv = document.querySelector('#fiveDiv');
-    // fiveDiv.className = 'row border my-2 p-2 border-dark rounded justify-content-center shadow';
     main.appendChild(fiveDiv);
-    // // Create button
-    let fiveBtn = document.createElement('button');
+    //button
     fiveBtn.className = 'col-12 my-2 btn btn-primary';
     fiveBtn.textContent = 'Meet My Friends';
     fiveDiv.prepend(fiveBtn);
@@ -150,8 +153,8 @@ document.body.appendChild(main);
             }
         }
         fiveBtn.setAttribute('disabled', true);
-        let link = document.createElement('a');
-        link.textContent = 'Read more about my friends';
+        
+        link.textContent = 'This information and more, provided by Fandom';
         link.setAttribute('href', 'https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki'); 
         link.setAttribute('target', '_blank');
         fiveDiv.appendChild(link);
